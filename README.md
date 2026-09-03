@@ -2,7 +2,7 @@
 
 > A Java Swing application featuring five interactive mini-games in one desktop application.
 
-**Puzzle Master** is a Java-based desktop game collection built using **Java Swing**. It brings together five simple puzzle and casual games under a single graphical interface.
+**PuzzleFlow** is a Java-based desktop game collection built using **Java Swing**. It brings together five simple puzzle and casual games under a single graphical interface.
 
 The project is designed to demonstrate Java fundamentals, object-oriented programming, GUI development, event handling, randomization, and basic game logic.
 
