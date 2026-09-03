@@ -1,145 +1,321 @@
-# 🎮 Puzzle Master
+# 🎮 PuzzleFlow
 
-Puzzle Master is a beginner-level Java console application that contains five simple mini-games. The project is designed to practice basic Java programming concepts such as variables, loops, conditions, arrays, methods, user input, and random numbers.
+> A Java Swing application featuring five interactive mini-games in one desktop application.
 
-## 🎯 Games
+**Puzzle Master** is a Java-based desktop game collection built using **Java Swing**. It brings together five simple puzzle and casual games under a single graphical interface.
 
-The project currently contains five games:
+The project is designed to demonstrate Java fundamentals, object-oriented programming, GUI development, event handling, randomization, and basic game logic.
 
-1. **Number Guessing** 🎯
-   - The computer selects a random number between 1 and 100.
-   - The player tries to guess the number.
-   - The game gives hints such as "Too high" or "Too low".
+---
 
-2. **Rock Paper Scissors** ✊
-   - The player chooses Rock, Paper, or Scissors.
-   - The computer randomly selects its choice.
-   - The winner is determined using the standard rules.
+## ✨ Features
 
-3. **Word Scramble** 🔤
-   - The game selects a random word.
-   - The letters are scrambled.
-   - The player must guess the original word.
+Puzzle Master currently includes **five games**:
 
-4. **Math Puzzle** 🧮
-   - The game generates a random mathematical question.
-   - The player enters the answer.
-   - The game checks whether the answer is correct.
+### 🎯 1. Number Guessing
 
-5. **Memory Game** 🧠
-   - The player is shown a sequence of cards.
-   - The cards are hidden.
-   - The player must remember the original order.
+Try to guess a randomly generated number between **1 and 100**.
+
+* Generates a random number for every game
+* Provides **Too High** / **Too Low** hints
+* Tracks the number of attempts
+* Displays a success message when the number is guessed
+
+### ✊ 2. Rock Paper Scissors
+
+Play the classic Rock Paper Scissors game against the computer.
+
+* Choose Rock, Paper, or Scissors
+* Computer makes a randomized choice
+* Automatically determines the winner
+* Simple and interactive GUI
+
+### 🔤 3. Word Scramble
+
+Unscramble a randomly selected word.
+
+* Generates a word
+* Scrambles its characters
+* Allows the player to enter a guess
+* Checks the answer and provides feedback
+
+### 🧮 4. Math Puzzle
+
+Test your arithmetic skills with automatically generated math problems.
+
+* Randomly generated questions
+* Interactive answer input
+* Automatic answer verification
+* Immediate feedback
+
+### 🧠 5. Memory Game
+
+Test your memory by remembering a sequence and reproducing it correctly.
+
+* Displays a sequence
+* Challenges the player to remember it
+* Accepts the player's response
+* Checks whether the sequence was reproduced correctly
+
+---
+
+## 🖥️ Graphical User Interface
+
+Unlike the original console implementation, the current version uses **Java Swing** for its user interface.
+
+The application starts through `Main.java`, which launches the Swing `MainFrame`. The main frame provides navigation between the menu and each individual game panel.
+
+The UI is organized into separate panels for each game:
+
+```text
+MainFrame
+│
+├── MenuPanel
+├── NumberGuessingPanel
+├── RockPaperScissorsPanel
+├── WordScramblePanel
+├── MathPuzzlePanel
+└── MemoryGamePanel
+```
+
+The main application window is configured as a fixed-size **900 × 600** Swing window.
+
+---
 
 ## 🛠️ Technologies Used
 
-- **Java**
-- Java `Scanner`
-- Java `Random`
-- Arrays
-- Loops
-- Conditional statements
-- Methods
-- Basic Object-Oriented Programming
+* **Java**
+* **Java Swing**
+* **Java AWT**
+* **Object-Oriented Programming**
+* **Event-driven programming**
+* **Random number generation**
+* **Arrays & Strings**
+* **Methods & Classes**
+
+No external libraries or frameworks are required.
+
+---
 
 ## 📁 Project Structure
 
 ```text
-PuzzleGame/
+ProjectX/
 │
 ├── src/
 │   └── puzzle/
+│       │
 │       ├── Main.java
 │       ├── GameMenu.java
+│       ├── MathPuzzle.java
+│       ├── MemoryGame.java
 │       ├── NumberGuessing.java
 │       ├── RockPaperScissors.java
 │       ├── WordScramble.java
-│       ├── MathPuzzle.java
-│       └── MemoryGame.java
+│       │
+│       └── UI/
+│           ├── MainFrame.java
+│           ├── MenuPanel.java
+│           ├── MathPuzzlePanel.java
+│           ├── MemoryGamePanel.java
+│           ├── NumberGuessingPanel.java
+│           ├── RockPaperScissorsPanel.java
+│           └── WordScramblePanel.java
 │
 └── README.md
 ```
 
-## ▶️ How to Run
+The repository currently contains separate game-logic classes as well as dedicated Swing UI components for each game.
 
-### 1. Clone or download the project
+---
 
-Download the project to your computer.
+## 🚀 Getting Started
 
-### 2. Open the project
+### Prerequisites
 
-Open the project using a Java IDE such as:
+Make sure you have the following installed:
 
-- IntelliJ IDEA
-- Eclipse
-- VS Code
-- NetBeans
+* **Java JDK 8 or later**
+* A Java IDE such as:
 
-### 3. Run `Main.java`
+  * IntelliJ IDEA
+  * Eclipse
+  * VS Code
+  * NetBeans
 
-Bash the command in terminal: java main.java
+You can verify your Java installation with:
 
-The application will display the main menu:
-
-```text
-============================
-       PUZZLE MASTER
-============================
-1. Number Guessing
-2. Rock Paper Scissors
-3. Word Scramble
-4. Math Puzzle
-5. Memory Game
-6. Exit
-============================
-
-Enter your choice:
+```bash
+java -version
+javac -version
 ```
 
-Enter a number from `1` to `6` to select an option.
+---
 
-## 📚 Learning Objectives
+## ▶️ Running the Project
 
-This project was created to practice the following Java concepts:
+### Option 1 — Using an IDE
 
-- Variables and data types
-- `if`, `else if`, and `else`
-- `switch` statements
-- `for` and `while` loops
-- Arrays
-- Strings
-- Methods
-- User input using `Scanner`
-- Random number generation using `Random`
-- Basic classes and objects
-- Program structure
+1. Clone the repository:
 
-## 🚀 Future Improvements
+```bash
+git clone https://github.com/OjusAnilNaik/ProjectX.git
+```
 
-The project can be expanded with:
+2. Open the project in your preferred Java IDE.
 
-- 👤 Player names
-- 🏆 Overall scoring system
-- ❤️ Lives/attempt limits
-- 🎚️ Difficulty levels
-- 🔄 Replay option for each game
-- 🏅 High-score/leaderboard system
-- 🎨 GUI using Java Swing or JavaFX
-- 💾 Saving scores to a file
-- ➕ More puzzle games
-- 🧠 Improved Memory Game with a proper card board
+3. Mark `src` as the source directory if your IDE requires it.
 
-## 👨‍💻 Project Status
+4. Locate:
 
-**Current version:** `v1.0`
+```text
+src/puzzle/Main.java
+```
 
-The current version focuses on implementing the five basic games using beginner-level Java concepts.
+5. Run `Main.java`.
+
+The application will open the **Puzzle Master** graphical interface.
+
+`Main.java` uses `SwingUtilities.invokeLater()` to initialize the GUI on Swing's event-dispatch thread.
+
+---
+
+### Option 2 — Using the Terminal
+
+From the project root:
+
+#### Compile
+
+```bash
+javac -d out src/puzzle/*.java src/puzzle/UI/*.java
+```
+
+#### Run
+
+```bash
+java -cp out puzzle.Main
+```
+
+---
+
+## 🧩 Application Flow
+
+```text
+                    ┌─────────────────┐
+                    │   Puzzle Master  │
+                    │     Main Menu    │
+                    └────────┬────────┘
+                             │
+          ┌──────────────────┼──────────────────┐
+          │                  │                  │
+          ▼                  ▼                  ▼
+   Number Guessing    Rock Paper Scissors   Word Scramble
+          │                  │                  │
+          └──────────────────┼──────────────────┘
+                             │
+                    ┌────────┴────────┐
+                    ▼                 ▼
+               Math Puzzle       Memory Game
+```
+
+The `MainFrame` handles switching between the different game panels, allowing the application to behave as a single cohesive desktop application rather than five separate programs.
+
+---
+
+## 📚 Concepts Demonstrated
+
+This project is useful for practicing several core Java concepts:
+
+### Java Fundamentals
+
+* Variables and data types
+* Conditional statements
+* Loops
+* Methods
+* Arrays
+* Strings
+* Random number generation
+
+### Object-Oriented Programming
+
+* Classes and objects
+* Encapsulation
+* Separation of responsibilities
+* Reusable game logic
+
+### GUI Development
+
+* Java Swing
+* `JFrame`
+* Panels
+* Buttons
+* Labels
+* Text fields
+* Event listeners
+* Layout management
+* GUI navigation
+
+### Application Architecture
+
+The project separates **game logic** from **GUI components**, making the individual games easier to understand and modify.
+
+---
+
+## 🎯 Project Goals
+
+The main goals of Puzzle Master are to:
+
+* Practice Java programming fundamentals
+* Learn desktop GUI development with Swing
+* Understand event-driven programming
+* Implement simple game mechanics
+* Practice organizing a Java project into multiple classes
+* Build a complete interactive application rather than isolated programs
+
+---
+
+## 🔮 Future Improvements
+
+Possible improvements for future versions include:
+
+* 🏆 Global scoring system
+* 👤 Player profiles
+* 📊 Statistics and game history
+* 🎚️ Difficulty levels
+* ❤️ Lives / attempt limits
+* 🔄 Replay functionality
+* 🏅 High-score system
+* 🔊 Sound effects and background music
+* 🎨 Improved animations and visual design
+* 💾 Persistent score storage
+* ➕ Additional mini-games
+
+---
+
+## 📌 Project Status
+
+**Current Status:** Active development
+
+The project currently contains the core five games along with a Java Swing-based graphical interface.
+
+The repository structure and implementation may continue to change as new features and improvements are added.
+
+---
+
+## 👨‍💻 Author
+
+**Ojus Anil Naik**
+
+GitHub: [@OjusAnilNaik](https://github.com/OjusAnilNaik)
+
+---
 
 ## 📄 License
 
-This project is created for educational and learning purposes.
+This project is intended primarily for **educational and learning purposes**.
 
-```
+---
 
-You can keep this as **v1.0**. Don't pad the README with features you haven't implemented yet—that makes a beginner project look dishonest. As we add the score system, difficulty, GUI, etc., we can update the README version-by-version.
-```
+⭐ If you found this project interesting, consider giving the repository a star!
+
+**Repository:** https://github.com/OjusAnilNaik/ProjectX
