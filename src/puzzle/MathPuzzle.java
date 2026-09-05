@@ -23,7 +23,7 @@ public class MathPuzzle {
         int userAnswer = scanner.nextInt();
 
         if (userAnswer == answer) {
-            System.out.println("Correct! 🎉");
+            System.out.println("Correct! ");
         } else {
             System.out.println("Wrong!");
             System.out.println("Correct answer: " + answer);
